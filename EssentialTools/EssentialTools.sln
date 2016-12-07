@@ -11,7 +11,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		Description = Ninject example project
+		Description = Ninject and UnitTest example project
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{97FABB6B-3482-4AF5-8436-5E3C08D2F315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
