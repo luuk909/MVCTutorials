@@ -1,29 +1,65 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+header, footer, nav, section {
+    display: block;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 textarea {
-    max-width: 280px;
+    min-height: 75px;
 }
 
-/* Chapter 7 */
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
 BODY { font-family: Cambria, Georgia, "Times New Roman"; margin: 0; }
 DIV#header DIV.title, DIV.item H3, DIV.item H4, DIV.pager A {
     font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
@@ -45,7 +81,7 @@ DIV.pager A { font-size: 1.1em; color: #666; text-decoration: none;
 DIV.pager A:hover { background-color: Silver; }
 DIV.pager A.selected { background-color: #353535; color: White; }
 
-/* Chapter 8 */
+
 DIV#categories A
 {
     font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; display: block;
@@ -69,3 +105,8 @@ TFOOT TD { border-top: 1px dotted gray; font-weight: bold; }
     text-decoration: none; padding: .15em 1.5em .2em 1.5em;
     background-color: #353535; border: 1px solid black;
 }
+
+DIV#cart { float:right; margin: .8em; color: Silver; 
+   background-color: #555; padding: .5em .5em .5em 1em; }
+DIV#cart A { text-decoration: none; padding: .4em 1em .4em 1em; line-height:2.1em;
+   margin-left: .5em; background-color: #333; color:White; border: 1px solid black;}
