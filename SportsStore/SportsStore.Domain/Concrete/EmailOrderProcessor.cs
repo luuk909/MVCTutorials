@@ -67,7 +67,7 @@ namespace SportsStore.Domain.Concrete
                     .AppendLine(shippingDetails.Country)
                     .AppendLine(shippingDetails.Zip)
                     .AppendLine("---")
-                    .AppendFormat($"Gift wrap: {0}", shippingDetails.GiftWrap ? "Yes" : "No");
+                    .AppendFormat("Gift wrap: {0}", shippingDetails.GiftWrap ? "Yes" : "No");
 
                 MailMessage message = new MailMessage(settings.MailFromAddress, settings.MailToAddress, "New order submitted", body.ToString());
 
