@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using SportsStore.Domain.Entities;
 using System.Linq;
 using SportsStore.Domain.Concrete;
+using System.Configuration;
 
 namespace SportsStore.WebUI.Infrastructure
 {
@@ -38,6 +39,14 @@ namespace SportsStore.WebUI.Infrastructure
             //}.AsQueryable());
             //kernel.Bind<IProductRepository>().ToConstant(mock.Object);
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+
+            EmailSettings emailSettings = new EmailSettings()
+            {
+                WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+
+            kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>().WithConstructorArgument("settings", emailSettings);
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
     }
 }
